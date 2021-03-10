@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Current Time</title>
+</head>
+<body>
+	{% extends "base.html" %}
+	{% include template_name %}
+	{% block content %}
+		{% if now %}
+			<p>Current date and time is {{ now }}</p>
+		{% else %}
+			<p>now variable is not available</p>
+		{% endif %}
+
+		<p>Current scheme:{{ request.scheme }}</p>
+		<p>BASE_DIR:{{ base_dir }}</p>
+	{% endblock %}
+</body>
+</html>
